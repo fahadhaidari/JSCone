@@ -11,13 +11,11 @@ window.onload = () => {
 
     setInterval(() => {
         angle += 0.08;
-        const x = Math.cos(angle) * angle;
-        const y = Math.sin(angle) * angle;
         factor += 50;
         
-        if(factor % 1000 == 0) {
+        if (factor % 1000 === 0) {
           context.fillStyle = "#" + Math.random().toString(16).substr(2, 6);
         }
-        context.fillRect(x, y - angle, 10 * Math.cos(angle), 5 * Math.sin(factor));
+        context.fillRect(Math.cos(angle) * angle, (Math.sin(angle) * angle) - angle, 10 * Math.cos(angle), 5 * Math.sin(factor));
     }, 1);
 }
