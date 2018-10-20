@@ -14,7 +14,7 @@ window.onload = () => {
         const x = Math.cos(angle) * angle;
         const y = Math.sin(angle) * angle;
         factor += 50;
-
+        
         if(factor % 1000 == 0) {
           context.fillStyle = "#" + Math.random().toString(16).substr(2, 6);
         }
